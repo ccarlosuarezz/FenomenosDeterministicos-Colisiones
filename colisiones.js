@@ -71,9 +71,10 @@ function simulation() {
             }
             for (let i = 0; i < vehicleList.length; i++) {
                 actualVehicle = vehicleList[i];
-                angle = actualVehicle[3] * Math.PI / 180;
-                actualVehicle[0] = actualVehicle[0] + actualVehicle[2] * Math.cos(angle);
-                actualVehicle[1] = actualVehicle[1] + actualVehicle[2] * Math.sin(angle);
+                angle = Number(actualVehicle[3] * Math.PI / 180);
+                actualVehicle[0] = Math.round(Number(actualVehicle[0]) + Number(actualVehicle[2]) * Math.cos(angle));
+                actualVehicle[1] = Math.round(Number(actualVehicle[1]) + Number(actualVehicle[2]) * Math.sin(angle));
+                console.log(`Vehiculo ${i}: x=${actualVehicle[0]} - y=${actualVehicle[1]}`);
             }
             initialTime++;
         }
