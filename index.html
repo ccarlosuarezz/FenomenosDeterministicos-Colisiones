@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fenomeno Deterministico - Colision Moviles</h1>
+    <div class="form_container">
+        <div class="form">
+            <p id="n_vehicle"><strong>Vehiculo 1</strong></p>
+        </div>
+        <div class="form">
+            <input type="number" name="x_value" id="input_x" autocomplete="off" required/>
+            <label for="x_value" class="label_input">
+                <span class="content_input">Posición X</span>
+            </label>
+        </div>
+        <div class="form">
+            <input type="number" name="y_value" id="input_y" autocomplete="off" required/>
+            <label for="y_value" class="label_input">
+                <span class="content_input">Posicion Y</span>
+            </label>
+        </div>
+        <div class="form">
+            <input type="number" name="speed_value" id="input_speed" autocomplete="off" required/>
+            <label for="speed_value" class="label_input">
+                <span class="content_input">Velocidad (m/s)</span>
+            </label>
+        </div>
+        <div class="form">
+            <input type="number" name="dir_value" id="input_dir" autocomplete="off" required/>
+            <label for="dir_value" class="label_input">
+                <span class="content_input">Dirección (°)</span>
+            </label>
+        </div>
+        <button id="add_button" class="buttons">
+            <strong>Agregar</strong>
+        </button>
+    </div>
+    <div class="table_container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Vehicle</th>
+                    <th>Posicion X</th>
+                    <th>Posicion Y</th>
+                    <th>Velocidad (m/s)</th>
+                    <th>Direccion (°)</th>
+                </tr>
+            </thead>
+            <tbody id="vehicle_list">
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form_container">
+        <div class="form">
+            <input type="number" name="time_value" id="input_time" autocomplete="off" required/>
+            <label for="time_value" class="label_input">
+                <span class="content_input">Tiempo de simulación (s)</span>
+            </label>
+        </div>
+        <button id="sim_button" class="buttons">
+            <strong>Simular</strong>
+        </button>
+    </div>
+    <p id="result"><strong>Resultado: </strong></p>
+    <script src="colisiones.js"></script>
+</body>
+</html>
